@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ggbet · 从关键词说起</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f5f0;
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            color: #2c2c2c;
+            line-height: 1.7;
+            padding: 0 1.5rem;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2.5rem 0 4rem 0;
+        }
+
+        /* hero 区 */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem 2.8rem 1rem;
+            border-bottom: 1px solid #ddd2c0;
+            margin-bottom: 3.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            color: #1e1e1e;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5b4f41;
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        /* 引述块 */
+        .pull-quote {
+            background-color: #efece6;
+            padding: 1.6rem 2rem;
+            margin: 2.8rem 0;
+            border-left: 6px solid #9b8b7a;
+            font-size: 1.1rem;
+            color: #3d352a;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .pull-quote strong {
+            font-weight: 600;
+            color: #1e1e1e;
+        }
+
+        /* 正文段落 */
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            font-weight: 400;
+            color: #1e1e1e;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px dashed #cfc6b8;
+            padding-bottom: 0.4rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #3d352a;
+            margin: 1.8rem 0 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .inset-box {
+            background: #fffbf7;
+            padding: 1.6rem 2rem;
+            border: 1px solid #d6cdbe;
+            border-radius: 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            margin: 2.2rem 0;
+        }
+
+        .inset-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .inset-box li {
+            padding: 0.5rem 0 0.5rem 1.8rem;
+            position: relative;
+            margin-bottom: 0.4rem;
+        }
+
+        .inset-box li::before {
+            content: "·";
+            font-weight: bold;
+            font-size: 1.6rem;
+            color: #7b6b58;
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            background: #f1ece4;
+            padding: 2rem 2rem 1.8rem 2rem;
+            border-radius: 18px;
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            color: #1e1e1e;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item .a {
+            color: #4a4137;
+            padding-left: 0.8rem;
+            border-left: 3px solid #bcae9b;
+        }
+
+        .more-faq {
+            text-align: right;
+            font-size: 0.95rem;
+            margin-top: 0.8rem;
+            color: #7b6b58;
+        }
+
+        /* 底部链接 */
+        .footer-link {
+            margin-top: 3.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ddd2c0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #4f473d;
+        }
+
+        .footer-link a {
+            color: #4f3e2e;
+            text-decoration: none;
+            border-bottom: 1px dotted #7b6b58;
+            font-weight: 500;
+        }
+
+        .footer-link a:hover {
+            color: #1e1e1e;
+            border-bottom: 1px solid #1e1e1e;
+        }
+
+        .metadata {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #887b6b;
+            letter-spacing: 0.02em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .pull-quote {
+                padding: 1.2rem 1.4rem;
+                font-size: 1rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            .inset-box {
+                padding: 1.2rem 1.2rem;
+            }
+            .faq-summary {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0 1rem;
+            }
+            .hero {
+                padding: 2.5rem 0.5rem 2rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>ggbet</h1>
+        <p>一个词，一条线索，一种观察方式</p>
+    </div>
+
+    <!-- 引述块：叙述感开端 -->
+    <div class="pull-quote">
+        <strong>ggbet</strong> 并不只是一个标签。当我们把它当作一个切片，它所串联起的，是信息、界面与参与方式的交汇面。从它出发，可以看到一些细微但真实的逻辑。
+    </div>
+
+    <!-- 介绍 / 背景 -->
+    <section>
+        <h2>一个关键词的边界</h2>
+        <p>很多时候，我们习惯用关键词来定位一个站点、一项服务或一种互动。但关键词本身也具有厚度。<strong>ggbet</strong> 在当下的语境里，往往指向某种数字化的选择场域——那里有策略、有节奏、也有对信息的筛选。它不是孤立的符号，而更像一扇门，通往一个精心组织的空间。</p>
+        <p>如果仔细拆解这个词的组合层次，会发现它既保留了一定识别度，又留有延伸的余地。这正是许多人在面对它时，会产生进一步了解意愿的原因。</p>
+    </section>
+
+    <!-- 优势区：卡片式 inset -->
+    <section>
+        <h2>结构上的几个侧面</h2>
+        <div class="inset-box">
+            <ul>
+                <li><strong>信息密度可控</strong> —— 界面呈现倾向于模块化，每个区块承载明确功能，减少认知负荷。</li>
+                <li><strong>路径预设清晰</strong> —— 从首页到具体环节，动线带有一定的引导性，但不过度干预。</li>
+                <li><strong>视觉层级分明</strong> —— 配色克制，间距宽松，重点区域通过留白和微对比来区分。</li>
+                <li><strong>反馈机制直观</strong> —— 操作后的状态变化用简单的视觉提示表达，不依赖繁杂动效。</li>
+            </ul>
+        </div>
+        <p>这些特点并非孤立存在，它们共同构成了一种偏向“实用主义”的设计语言。不追求装饰性，而是服务于一个目标：让使用者在浏览时，能快速抓到核心信息。</p>
+    </section>
+
+    <!-- 说明区：日常场景 / 使用情境 -->
+    <section>
+        <h2>在什么情境下会想到它</h2>
+        <p>假设你正在整理一批数字资源，或是对某个领域产生兴趣，想找一个相对集中的信息来源。这时，<a href="https://page-ggbet.com">ggbet</a> 可能会出现在你的视野里——它不算大，但结构完整；它不追热点，但内容有脉络。许多人把它当作一个“跳板”，而不是终点。</p>
+        <p>也有一部分使用者是出于对特定主题的好奇，顺着关键词指引来到这里。对他们而言，这个页面更像一个起点，后续的探索路径完全取决于个人的关注点。</p>
+        <div class="pull-quote" style="margin-top:1.6rem;">
+            “它提供了一种可能性，但不是唯一的答案。” —— 这是多数人接触后的朴素感受。
+        </div>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>几个常见疑问</h2>
+        <div class="faq-summary">
+            <div class="faq-item">
+                <span class="q">Q：这个网站主要围绕什么主题？</span>
+                <div class="a">A：它更像一个信息节点，内容涉及数字工具、交互逻辑与资源整理，不局限于单一垂直领域。</div>
+            </div>
+            <div class="faq-item">
+                <span class="q">Q：页面风格为什么偏保守？</span>
+                <div class="a">A：设计上选择减少视觉干扰，以便让文本和功能模块本身成为焦点。这种风格适合需要静心阅读或操作的场景。</div>
+            </div>
+            <div class="faq-item">
+                <span class="q">Q：是否适合新手？</span>
+                <div class="a">A：界面逻辑比较直接，没有隐藏式操作，对初次接触的人友好。不过部分内容需要一定的背景知识才能更好理解。</div>
+            </div>
+            <div class="more-faq">—— 更多问题，可自行探索或直接体验。</div>
+        </div>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-link">
+        <p>如果想亲自理解这个关键词的结构与氛围，可以直接前往 <a href="https://page-ggbet.com">ggbet</a>。页面本身会告诉你更多。</p>
+        <div class="metadata">2025 · 基于观察的描述</div>
+    </div>
+
+</div>
+</body>
+</html>
